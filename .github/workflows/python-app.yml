@@ -58,7 +58,7 @@ jobs:
           -H "Authorization: Bearer $RENDER_API_KEY" \
           -H "Accept: application/json" \
           -H "Content-Type: application/json" \
-          -d '{"serviceId": "your-service-id"}' \
+          -d '{"serviceId": "srv-cr0ua9rqf0us73fg28qg"}' \
           https://api.render.com/deploy/srv-xyz
 
     - name: Output Render URL
