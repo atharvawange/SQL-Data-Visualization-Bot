@@ -8,7 +8,6 @@ This project provides a web application that allows users to upload data (in CSV
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
 - [References](#references)
 
 ## Features
