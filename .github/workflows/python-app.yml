@@ -63,4 +63,4 @@ jobs:
 
     - name: Output Render URL
       run: |
-        echo "Your application is deployed at: https://sql-datavisualization-bot.onrender.com"
+        echo "Your application is deployed at:https://sql-datavisualization-bot.onrender.com"
