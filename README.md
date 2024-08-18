@@ -33,7 +33,7 @@ This project provides a web application that allows users to upload data (in CSV
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 
-Installation
+## Installation
 
 Clone the Repository:
 bash
@@ -71,18 +71,19 @@ Choose the desired visualization (e.g., table, line chart, bar chart, pie chart)
 View Results:
 The application will display the generated SQL query and the corresponding data visualization.
 
-API Endpoints
+## API Endpoints
 POST /upload: Upload a CSV or Excel file.
 POST /generate-sql: Generate SQL query from natural language prompt.
 POST /visualize: Visualize data based on the generated SQL query.
 
-References
+### References
+
 This project makes use of several third-party libraries and resources. If you're looking to understand or extend the functionality, you may find the following links helpful:
 
--[Flask](https://flask.palletsprojects.com/en/3.0.x/) - The micro web framework used for the back-end.
--[Pandas](https://pandas.pydata.org/) - A powerful data analysis and manipulation library.
--[Matplotlib](https://matplotlib.org/) - A plotting library used for creating static, interactive, and animated visualizations.
--[Hugging Face Transformers](https://huggingface.co/defog/sqlcoder2) - The library used for natural language processing and model integration.
--[SQLAlchemy](https://www.sqlalchemy.org/) - A SQL toolkit and Object-Relational Mapping (ORM) library for Python.
--[Bootstrap](https://getbootstrap.com/) - (Optional) If you used Bootstrap for CSS styling, you can include this.
--[Jinja2](https://jinja.palletsprojects.com/en/2.10.x/) - The templating engine used with Flask to render HTML templates.
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/) - The micro web framework used for the back-end.
+- [Pandas](https://pandas.pydata.org/) - A powerful data analysis and manipulation library.
+- [Matplotlib](https://matplotlib.org/) - A plotting library used for creating static, interactive, and animated visualizations.
+- [Hugging Face Transformers](https://huggingface.co/defog/sqlcoder2) - The library used for natural language processing and model integration.
+- [SQLAlchemy](https://www.sqlalchemy.org/) - A SQL toolkit and Object-Relational Mapping (ORM) library for Python.
+- [Bootstrap](https://getbootstrap.com/) - (Optional) If you used Bootstrap for CSS styling.
+- [Jinja2](https://jinja.palletsprojects.com/en/2.10.x/) - The templating engine used with Flask to render HTML templates.
