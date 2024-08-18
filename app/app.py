@@ -5,13 +5,7 @@ from app.model import some_model_function
 
 def create_app():
     app = Flask(__name__)
-
-    # Load configuration if you have a config file
-    # app.config.from_pyfile('config.py')  # Uncomment if needed
-
-    # Register blueprints
     app.register_blueprint(main)
-
     return app
 
 app = create_app()
