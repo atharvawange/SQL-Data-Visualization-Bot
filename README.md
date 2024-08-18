@@ -18,7 +18,6 @@ This project provides a web application that allows users to upload data (in CSV
 - Powered by Flask for the back-end and API.
 
 ## Project Structure
-```plaintext
 .
 ├── app/
 │   ├── templates/
