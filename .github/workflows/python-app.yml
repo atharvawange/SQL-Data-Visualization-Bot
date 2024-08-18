@@ -49,16 +49,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Deploy to Render
+    - name: Trigger deployment
       env:
-        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+        DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL }}
       run: |
         curl -v -X POST \
-          -H "Authorization: Bearer $RENDER_API_KEY" \
-          -H "Accept: application/json" \
           -H "Content-Type: application/json" \
-          https://api.render.com/v1/services/srv-cr11bbrtq21c73cn8ab0/deploy
+          $DEPLOY_HOOK_URL
 
-    - name: Output Render URL
+    - name: Output deployment URL
       run: |
         echo "Your application is deployed at: https://sql-datavisualization-bot.onrender.com"
