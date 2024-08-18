@@ -1,61 +1,58 @@
-# SQL_DataVisualization_Bot
-This project provides a web application that allows users to upload data (in CSV or Excel format), generate SQL queries using natural language prompts, and visualize the results. The project utilizes the Hugging Face model defog/sqlcoder2 for converting prompts into SQL queries.
+This project provides a web application that allows users to upload data (in CSV or Excel format), generate SQL queries using natural language prompts, and visualize the results. The project utilizes the Hugging Face model `defog/sqlcoder2` for converting prompts into SQL queries.
 
-Table of Contents
-Features
-Project Structure
-Installation
-Usage
-API Endpoints
-References
+## Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [References](#references)
 
-Features
-Convert natural language prompts into SQL queries.
-Upload and process CSV or Excel files.
-Visualize data using Pandas and Matplotlib.
-Responsive front-end built with HTML and CSS.
-Powered by Flask for the back-end and API.
-Project Structure
-plaintext
-Copy code
+## Features
+- Convert natural language prompts into SQL queries.
+- Upload and process CSV or Excel files.
+- Visualize data using Pandas and Matplotlib.
+- Responsive front-end built with HTML and CSS.
+- Powered by Flask for the back-end and API.
+
+## Project Structure
+```plaintext
 .
 ├── app/
 │   ├── templates/
-│   │   ├── index.html      # Front-end HTML template
+│   │   ├── index.html        # Front-end HTML template
 │   ├── static/
 │   │   ├── css/
-│   │   │   └── styles.css  # CSS for styling
-│   ├── __init__.py         # Initialize Flask app
-│   ├── main.py             # Main entry point for running the app
-│   ├── model.py            # Hugging Face model logic for generating SQL
-│   ├── utils.py            # Utility functions for executing SQL and visualizing data
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-Installation
-Clone the Repository:
+│   │   │   └── styles.css    # CSS for styling
+│   ├── __init__.py           # Initialize Flask app
+│   ├── main.py               # Main entry point for running the app
+│   ├── model.py              # Hugging Face model logic for generating SQL
+│   ├── utils.py              # Utility functions for executing SQL and visualizing data
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
 
+Installation
+
+Clone the Repository:
 bash
-Copy code
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+
 Set Up Virtual Environment:
-
 bash
-Copy code
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install Dependencies:
+source venv/bin/activate  # On Windows use venv\Scripts\activate
 
+Install Dependencies:
 bash
-Copy code
 pip install -r requirements.txt
+
 Set Up Environment Variables:
 Create a .env file in the root directory and add any necessary environment variables (if applicable).
 
 Run the Application:
-
 bash
-Copy code
 python main.py
 Usage
 Access the Web Interface:
@@ -77,8 +74,6 @@ API Endpoints
 POST /upload: Upload a CSV or Excel file.
 POST /generate-sql: Generate SQL query from natural language prompt.
 POST /visualize: Visualize data based on the generated SQL query.
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
 
 References
 This project makes use of several third-party libraries and resources. If you're looking to understand or extend the functionality, you may find the following links helpful:
