@@ -29,6 +29,7 @@ This project provides a web application that allows users to upload data (in CSV
 │   ├── __init__.py           # Initialize Flask app
 │   ├── main.py               # Main entry point for running the app
 │   ├── model.py              # Hugging Face model logic for generating SQL
+│   ├── routes.py
 │   ├── utils.py              # Utility functions for executing SQL and visualizing data
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
