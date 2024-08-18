@@ -1,34 +1,34 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import sqlalchemy # type: ignore
+from io import BytesIO
+import base64
+from sqlalchemy import create_engine
 
-def execute_query(file_path, query):
-    # Load data into a Pandas DataFrame
-    if file_path.endswith('.csv'):
-        df = pd.read_csv(file_path)
-    elif file_path.endswith('.xlsx'):
-        df = pd.read_excel(file_path)
-    
-    # Create a SQLite in-memory database and load the DataFrame into it
-    engine = sqlalchemy.create_engine('sqlite://', echo=False)
-    df.to_sql('data', con=engine, index=False, if_exists='replace')
-    
-    # Execute the SQL query
-    result_df = pd.read_sql_query(query, con=engine)
-    
-    return result_df
+# Example database URL
+DATABASE_URL = "sqlite:///example.db"  # Replace with your actual database URL
+engine = create_engine(DATABASE_URL)
 
-def generate_visualization(df, viz_type):
-    output_path = 'app/static/plot.png'
-    
-    if viz_type == 'bar':
-        df.plot(kind='bar')
-    elif viz_type == 'line':
-        df.plot(kind='line')
-    elif viz_type == 'pie':
-        df.plot(kind='pie', y=df.columns[0], autopct='%1.1f%%')
+def execute_query(query):
+    with engine.connect() as connection:
+        result = pd.read_sql_query(query, connection)
+    return result
+
+def generate_visualization(df, chart_type="line"):
+    fig, ax = plt.subplots()
+    if chart_type == "line":
+        df.plot(kind="line", ax=ax)
+    elif chart_type == "bar":
+        df.plot(kind="bar", ax=ax)
+    elif chart_type == "pie":
+        df.plot(kind="pie", ax=ax, y=df.columns[0])
     else:
-        df.plot(kind='table')
+        df.plot(kind="table", ax=ax)
     
-    plt.savefig(output_path)
-    return output_path
+    # Save to a BytesIO object
+    img = BytesIO()
+    plt.savefig(img, format='png')
+    plt.close(fig)
+    img.seek(0)
+    img_base64 = base64.b64encode(img.getvalue()).decode('utf-8')
+    
+    return img_base64
