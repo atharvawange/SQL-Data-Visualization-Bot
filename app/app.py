@@ -1,7 +1,7 @@
 from flask import Flask
-from .routes import main
-from .utils import some_utility_function
-from .model import some_model_function
+from app.routes import main
+from app.utils import some_utility_function
+from app.model import some_model_function
 
 
 def create_app():
