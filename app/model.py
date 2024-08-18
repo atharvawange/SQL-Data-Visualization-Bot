@@ -1,7 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
 
-# Load the tokenizer and model directly
+# Load model and tokenizer
 tokenizer = AutoTokenizer.from_pretrained("defog/sqlcoder2")
 model = AutoModelForCausalLM.from_pretrained("defog/sqlcoder2")
 
