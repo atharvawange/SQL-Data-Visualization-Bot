@@ -32,7 +32,6 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-
   deploy:
     runs-on: ubuntu-latest
     needs: build  # This ensures the deploy job only runs after the build job succeeds
@@ -47,20 +46,4 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Deploy to Render
-      env:
-        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
-      run: |
-        curl -X POST \
-          -H "Authorization: Bearer $RENDER_API_KEY" \
-          -H "Accept: application/json" \
-          -H "Content-Type: application/json" \
-          -d '{"serviceId": "srv-cr0ua9rqf0us73fg28qg"}' \
-          https://api.render.com/deploy/srv-xyz
-
-    - name: Output Render URL
-      run: |
-        echo "Your application is deployed at:https://sql-datavisualization-bot.onrender.com"
+        python -m pip install -
