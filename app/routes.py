@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template, jsonify
-from .model import generate_sql
-from .utils import execute_query, generate_visualization
+from app.model import generate_sql
+from app.utils import execute_query, generate_visualization
 
 main = Blueprint('main', __name__)
 
