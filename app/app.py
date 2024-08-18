@@ -3,6 +3,7 @@ from app.routes import main
 from app.utils import some_utility_function
 from app.model import some_model_function
 
+
 def create_app():
     app = Flask(__name__)
     app.register_blueprint(main)
