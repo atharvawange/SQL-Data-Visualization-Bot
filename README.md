@@ -1,3 +1,5 @@
+# Data Query and Visualization Web Application
+
 This project provides a web application that allows users to upload data (in CSV or Excel format), generate SQL queries using natural language prompts, and visualize the results. The project utilizes the Hugging Face model `defog/sqlcoder2` for converting prompts into SQL queries.
 
 ## Table of Contents
