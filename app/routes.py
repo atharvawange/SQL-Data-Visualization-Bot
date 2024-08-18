@@ -1,6 +1,7 @@
 from flask import Blueprint, request, render_template, jsonify
 from app.model import generate_sql
 from app.utils import execute_query, generate_visualization
+import pandas as pd  # Ensure pandas is imported
 
 main = Blueprint('main', __name__)
 
