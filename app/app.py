@@ -1,5 +1,7 @@
 from flask import Flask
-from app.routes import main  # Updated import path
+from routes import main
+from utils import some_utility_function
+from model import some_model_function
 
 def create_app():
     app = Flask(__name__)
