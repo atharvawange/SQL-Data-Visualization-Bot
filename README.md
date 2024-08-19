@@ -39,8 +39,9 @@ The DataViz App is a Flask web application that allows users to upload CSV or ex
 
 Clone the Repository:
 bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone [[https://github.com/yourusername/your-repo-name.git](https://github.com/atharvawange/SQL_DataVisualization_Bot.git)](https://github.com/atharvawange/SQL_DataVisualization_Bot.git)
+
+cd SQL_DataVisualization_Bot
 
 Set Up Virtual Environment:
 bash
