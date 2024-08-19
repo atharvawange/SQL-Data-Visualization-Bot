@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataViz App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+    <div id="chatbot-window">
+        <h1>DataViz App</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file-upload">Upload CSV File:</label>
+            <input type="file" id="file-upload" name="file" accept=".csv" required>
+            
+            <label for="sql-query">SQL Query:</label>
+            <textarea id="sql-query" name="sql_query" placeholder="Enter your SQL query here..." required></textarea>
+            
+            <label for="visualization-type">Visualization Type:</label>
+            <select id="visualization-type" name="visualization_type">
+                <option value="table">Table</option>
+                <option value="line">Line Chart</option>
+                <option value="bar">Bar Chart</option>
+                <option value="pie">Pie Chart</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        {% if img_data %}
+        <div id="visualization-output">
+            <img src="data:image/png;base64,{{ img_data }}" alt="Generated Visualization">
+        </div>
+        {% elif error_message %}
+        <div id="error-message">
+            <p>{{ error_message }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
