@@ -39,44 +39,63 @@ The DataViz App is a Flask web application that allows users to upload CSV or ex
 
 Clone the Repository:
 bash
-git clone [[https://github.com/yourusername/your-repo-name.git](https://github.com/atharvawange/SQL_DataVisualization_Bot.git)](https://github.com/atharvawange/SQL_DataVisualization_Bot.git)
+
+git clone [https://github.com/atharvawange/SQL_DataVisualization_Bot.git](https://github.com/atharvawange/SQL_DataVisualization_Bot.git)
 
 cd SQL_DataVisualization_Bot
 
 Set Up Virtual Environment:
 bash
+
 python -m venv venv
+
 source venv/bin/activate  # On Windows use venv\Scripts\activate
 
 Install Dependencies:
+
 bash
+
 pip install -r requirements.txt
 
 Set Up Environment Variables:
+
 Create a .env file in the root directory and add any necessary environment variables (if applicable).
 
 Run the Application:
+
 bash
+
 python app/main.py
+
+
 Usage
+
 Access the Web Interface:
+
 Open your browser and go to http://localhost:5000.
 
 Upload Data:
+
 Upload a CSV or Excel file through the web interface.
 
 Enter a SQL Query:
+
 Type a SQL Query describing the data you want to query.
 
 Select Visualization Type:
+
 Choose the desired visualization (e.g., table, line chart, bar chart, pie chart).
 
 View Results:
+
 The application will display the generated SQL query and the corresponding data visualization.
 
 ## API Endpoints
+
 POST /upload: Upload a CSV or Excel file.
+
 POST /generate-sql: Generate SQL query from natural language prompt.
+
 POST /visualize: Visualize data based on the generated SQL query.
 
 ### References
