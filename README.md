@@ -55,7 +55,7 @@ pip install -r requirements.txt
 ```
 - **Set Up Environment Variables:**
 
-Create a .env file in the root directory and add any necessary environment variables (if applicable).
+      Create a .env file in the root directory and add any necessary environment variables (if applicable).
 
 - **Run the Application:**
 
@@ -66,23 +66,23 @@ python app/app.py
 ## Usage
 **1. Access the Web Interface:**
 
-Open your browser and go to http://localhost:5000.
+    Open your browser and go to http://localhost:5000.
 
 **2. Upload Data:**
 
-Upload a CSV or Excel file through the web interface.
+    Upload a CSV or Excel file through the web interface.
 
 **3. Enter a SQL Query:**
 
-Type a SQL Query to describe the data you want to query.
+    Type a SQL Query to describe the data you want to query.
 
 **4. Select Visualization Type:**
 
-Choose the desired visualization format (e.g., table, line chart, bar chart, pie chart).
+    Choose the desired visualization format (e.g., table, line chart, bar chart, pie chart).
 
 **5. View Results:**
 
-The application will display the generated SQL query and the corresponding data visualization.
+    The application will display the generated SQL query and the corresponding data visualization.
 
 ## API Endpoints
 - **POST /upload:** Upload a CSV or Excel file.
