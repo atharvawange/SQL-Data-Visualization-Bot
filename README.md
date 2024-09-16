@@ -36,28 +36,28 @@ The DataViz App is a Flask web application that allows users to upload CSV or ex
 └── README.md                 Project documentation
 ```
 ## Installation
-- Clone the Repository:
+- **Clone the Repository:**
 
 ```bash
 git clone https://github.com/atharvawange/SQL_DataVisualization_Bot.git
 cd SQL_DataVisualization_Bot
 ```
-- Set Up Virtual Environment:
+- **Set Up Virtual Environment:**
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use venv\Scripts\activate
 ```
-- Install Dependencies:
+- **Install Dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
-- Set Up Environment Variables:
+- **Set Up Environment Variables:**
 
 Create a .env file in the root directory and add any necessary environment variables (if applicable).
 
-- Run the Application:
+- **Run the Application:**
 
 ```bash
 python app/app.py
@@ -85,12 +85,12 @@ Choose the desired visualization format (e.g., table, line chart, bar chart, pie
 The application will display the generated SQL query and the corresponding data visualization.
 
 ## API Endpoints
-- POST /upload: Upload a CSV or Excel file.
-- POST /generate-sql: Generate SQL query from a natural language prompt.
-- POST /visualize: Visualize data based on the generated SQL query.
+- **POST /upload:** Upload a CSV or Excel file.
+- **POST /generate-sql:** Generate SQL query from a natural language prompt.
+- **POST /visualize:** Visualize data based on the generated SQL query.
 
 ## References
 This project utilizes several third-party libraries and resources. For further information or to extend functionality, the following links may be useful:
-- Flask - The micro web framework used for the back-end.
-- Pandas - A powerful data analysis and manipulation library.
-- Matplotlib - A plotting library for creating static, interactive, and animated visualizations.
+- **Flask** - The micro web framework used for the back-end.
+- **Pandas** - A powerful data analysis and manipulation library.
+- **Matplotlib** - A plotting library for creating static, interactive, and animated visualizations.
