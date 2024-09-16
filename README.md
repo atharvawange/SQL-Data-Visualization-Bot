@@ -91,7 +91,6 @@ The application will display the generated SQL query and the corresponding data 
 
 ## References
 This project utilizes several third-party libraries and resources. For further information or to extend functionality, the following links may be useful:
-
-Flask - The micro web framework used for the back-end.
-Pandas - A powerful data analysis and manipulation library.
-Matplotlib - A plotting library for creating static, interactive, and animated visualizations.
+- Flask - The micro web framework used for the back-end.
+- Pandas - A powerful data analysis and manipulation library.
+- Matplotlib - A plotting library for creating static, interactive, and animated visualizations.
