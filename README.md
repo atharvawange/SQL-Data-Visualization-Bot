@@ -36,28 +36,28 @@ The DataViz App is a Flask web application that allows users to upload CSV or ex
 └── README.md                 Project documentation
 ```
 ## Installation
-Clone the Repository:
+- Clone the Repository:
 
 ```bash
 git clone https://github.com/atharvawange/SQL_DataVisualization_Bot.git
 cd SQL_DataVisualization_Bot
 ```
-Set Up Virtual Environment:
+- Set Up Virtual Environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use venv\Scripts\activate
 ```
-Install Dependencies:
+- Install Dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
-Set Up Environment Variables:
+- Set Up Environment Variables:
 
 Create a .env file in the root directory and add any necessary environment variables (if applicable).
 
-Run the Application:
+- Run the Application:
 
 ```bash
 python app/app.py
