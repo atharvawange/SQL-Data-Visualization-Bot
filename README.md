@@ -11,11 +11,11 @@ The DataViz App is a Flask web application that allows users to upload CSV or ex
 - [References](#references)
 
 ## Features
-- Convert SQL queries into Visualized Data.
-- Upload and process CSV or Excel files.
-- Visualize data using Pandas and Matplotlib.
-- Responsive front-end built with HTML and CSS.
-- Powered by Flask for the back-end and API.
+- **Convert SQL Queries into Visualized Data:** Automatically generate visualizations based on SQL queries.
+- **Upload and Process Files:** Supports CSV and Excel file uploads for data processing.
+- **Dynamic Data Visualization:** Choose from various visualization types such as tables, line charts, bar charts, and pie charts.
+- **Responsive Front-End:** Built with HTML and CSS for a user-friendly interface.
+- **Flask-Powered Back-End:** Manages data and API interactions using Flask.
 
 ## Project Structure
 ```plaintext
@@ -36,72 +36,62 @@ The DataViz App is a Flask web application that allows users to upload CSV or ex
 └── README.md                 Project documentation
 ```
 ## Installation
-
 Clone the Repository:
-bash
 
-git clone [https://github.com/atharvawange/SQL_DataVisualization_Bot.git](https://github.com/atharvawange/SQL_DataVisualization_Bot.git)
-
+```bash
+git clone https://github.com/atharvawange/SQL_DataVisualization_Bot.git
 cd SQL_DataVisualization_Bot
-
+```
 Set Up Virtual Environment:
-bash
 
+```bash
 python -m venv venv
-
 source venv/bin/activate  # On Windows use venv\Scripts\activate
-
+```
 Install Dependencies:
 
-bash
-
+```bash
 pip install -r requirements.txt
-
+```
 Set Up Environment Variables:
 
 Create a .env file in the root directory and add any necessary environment variables (if applicable).
 
 Run the Application:
 
-bash
+```bash
+python app/app.py
+```
 
-python app/main.py
-
-
-Usage
-
-Access the Web Interface:
+## Usage
+**1. Access the Web Interface:**
 
 Open your browser and go to http://localhost:5000.
 
-Upload Data:
+**2. Upload Data:**
 
 Upload a CSV or Excel file through the web interface.
 
-Enter a SQL Query:
+**3. Enter a SQL Query:**
 
-Type a SQL Query describing the data you want to query.
+Type a SQL Query to describe the data you want to query.
 
-Select Visualization Type:
+**4. Select Visualization Type:**
 
-Choose the desired visualization (e.g., table, line chart, bar chart, pie chart).
+Choose the desired visualization format (e.g., table, line chart, bar chart, pie chart).
 
-View Results:
+**5. View Results:**
 
 The application will display the generated SQL query and the corresponding data visualization.
 
 ## API Endpoints
+- POST /upload: Upload a CSV or Excel file.
+- POST /generate-sql: Generate SQL query from a natural language prompt.
+- POST /visualize: Visualize data based on the generated SQL query.
 
-POST /upload: Upload a CSV or Excel file.
+## References
+This project utilizes several third-party libraries and resources. For further information or to extend functionality, the following links may be useful:
 
-POST /generate-sql: Generate SQL query from natural language prompt.
-
-POST /visualize: Visualize data based on the generated SQL query.
-
-### References
-
-This project makes use of several third-party libraries and resources. If you're looking to understand or extend the functionality, you may find the following links helpful:
-
-- [Flask](https://flask.palletsprojects.com/en/3.0.x/) - The micro web framework used for the back-end.
-- [Pandas](https://pandas.pydata.org/) - A powerful data analysis and manipulation library.
-- [Matplotlib](https://matplotlib.org/) - A plotting library used for creating static, interactive, and animated visualizations.
+Flask - The micro web framework used for the back-end.
+Pandas - A powerful data analysis and manipulation library.
+Matplotlib - A plotting library for creating static, interactive, and animated visualizations.
